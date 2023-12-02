@@ -1,0 +1,12 @@
+grumphp:
+    fixer:
+      fix_by_default: true
+    tasks:
+      phpcsfixer:
+        config: .php-cs-fixer.php
+      phpstan:
+        memory_limit: '-1'
+
+parameters:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: docker compose exec php php

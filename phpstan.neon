@@ -1,0 +1,21 @@
+parameters:
+    faker:
+        providerClasses:
+            - \Faker\Provider\Fakecar
+    paths:
+        - app/
+
+    level: 8
+
+    universalObjectCratesClasses:
+        - Illuminate\Database\Eloquent\Relations\Pivot
+
+    ignoreErrors:
+        - '#Unsafe usage of new static#'
+
+    excludePaths:
+        - ./tests/**.php
+        - ./vendor/**.php
+        - ./database/factories/**.php
+
+    checkMissingIterableValueType: false
