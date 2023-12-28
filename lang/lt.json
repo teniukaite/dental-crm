@@ -116,5 +116,15 @@
     "Category": "Kategorija",
     "Service Categories": "Paslaugų kategorijos",
     "service category": "paslaugų kategoriją",
-    "services": "paslaugas"
+    "services": "paslaugas",
+    "Users": "Naudotojai",
+    "user": "naudotoją",
+    "First Name": "Vardas",
+    "Last Name": "Pavardė",
+    "Email": "El. paštas",
+    "Password": "Slaptažodis",
+    "Phone Number": "Telefono numeris",
+    "Address": "Adresas",
+    "Info": "Informacija",
+    "Date of Birth": "Gimimo data"
 }
