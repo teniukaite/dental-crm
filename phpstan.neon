@@ -17,5 +17,6 @@ parameters:
         - ./tests/**.php
         - ./vendor/**.php
         - ./database/factories/**.php
+        - ./app/Filament/Resources/Shield
 
     checkMissingIterableValueType: false

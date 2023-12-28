@@ -28,6 +28,13 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('last_name')
                     ->label(__('Last Name'))
                     ->maxLength(255),
+                Forms\Components\Select::make('role')
+                    ->label(__('Role'))
+                    ->relationship('roles', 'name')
+                    ->multiple()
+                    ->searchable()
+                    ->preload()
+                    ->required(),
                 Forms\Components\TextInput::make('email')
                     ->label(__('Email'))
                     ->email()
@@ -47,7 +54,8 @@ class UserResource extends Resource
                     ->maxLength(255),
                 Forms\Components\DatePicker::make('date_of_birth')
                     ->label(__('Date of Birth'))
-                    ->native(false),
+                    ->native(false)
+                    ->displayFormat('Y-m-d'),
                 Forms\Components\TextInput::make('phone_number')
                     ->label(__('Phone Number'))
                     ->tel()
@@ -67,15 +75,20 @@ class UserResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('full_name')
+                    ->label(__('Full Name'))
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('roles.name')
+                    ->label(__('Role'))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->label(__('Email'))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('date_of_birth')
-                    ->date()
+                    ->label(__('Date of Birth'))
+                    ->date('Y-m-d')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('phone_number')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('address')
+                    ->label(__('Phone Number'))
                     ->searchable(),
             ])
             ->filters([

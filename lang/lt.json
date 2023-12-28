@@ -126,5 +126,7 @@
     "Phone Number": "Telefono numeris",
     "Address": "Adresas",
     "Info": "Informacija",
-    "Date of Birth": "Gimimo data"
+    "Date of Birth": "Gimimo data",
+    "Role": "Rolė",
+    "Password Confirmation": "Slaptažodžio patvirtinimas"
 }
