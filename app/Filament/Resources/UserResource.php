@@ -39,6 +39,8 @@ class UserResource extends Resource
                     ->label(__('Email'))
                     ->email()
                     ->maxLength(255),
+                Forms\Components\ColorPicker::make('color')
+                    ->label(__('Color')),
                 Forms\Components\TextInput::make('password')
                     ->label(__('Password'))
                     ->password()

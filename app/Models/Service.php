@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Service extends Model
 {
@@ -20,5 +21,10 @@ class Service extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(ServiceCategory::class);
+    }
+
+    public function visitations(): BelongsToMany
+    {
+        return $this->belongsToMany(Visitation::class, 'visitation_services', 'service_id', 'visitation_id');
     }
 }

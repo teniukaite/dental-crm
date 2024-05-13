@@ -52,4 +52,14 @@ class User extends Authenticatable implements FilamentUser, HasName
     {
         return $this->full_name ?? $this->first_name;
     }
+
+    public function patientVisits()
+    {
+        return $this->hasMany(Visitation::class, 'patient_id');
+    }
+
+    public function doctorVisits()
+    {
+        return $this->hasMany(Visitation::class, 'doctor_id');
+    }
 }
