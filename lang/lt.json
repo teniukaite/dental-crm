@@ -128,5 +128,11 @@
     "Info": "Informacija",
     "Date of Birth": "Gimimo data",
     "Role": "Rolė",
-    "Password Confirmation": "Slaptažodžio patvirtinimas"
+    "Password Confirmation": "Slaptažodžio patvirtinimas",
+    "Patient": "Pacientas",
+    "Doctor": "Gydytojas",
+    "Visit Date": "Vizito data",
+    "Price": "Kaina",
+    "Visitations": "Vizitai",
+    "visitation": "vizitą"
 }
